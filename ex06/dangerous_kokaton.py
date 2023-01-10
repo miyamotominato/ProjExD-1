@@ -93,14 +93,14 @@ def check_bound(obj_rct, scr_rct):
         tate = -1
     return yoko, tate
 
-#経過時間を表示  <---追加
+#経過時間を表示  c0a21121
 def timer(gamen):
     jikan = pg.time.get_ticks()
     fonto = pg.font.Font(None, 80)
     txt = fonto.render(f"{int(jikan/1000)}sec",True,(0,0,0))
     return gamen.blit(txt, (240,20))
 
-#ゲームスコアを表示 <---追加
+#ゲームスコアを表示 c0a21121
 def score(gamen):
     jikan = pg.time.get_ticks()
     fonto = pg.font.Font(None, 120)
@@ -155,15 +155,15 @@ def main():
                 SR.blit()
                 tori.change_image("fig/10.png")
                 tori.update(SR)
-                #終了時の経過時間の表示 <---追加
+                #終了時の経過時間の表示 c0a21121
                 timer(SR.sfc)
-                #終了時のゲームスコアの表示 <---追加
+                #終了時のゲームスコアの表示 c0a21121
                 score(SR.sfc)
                 pg.display.update()
                 clock.tick(0.5)
                 return
 
-        #時間の表示 <---追加
+        #時間の表示 c0a21121
         timer(SR.sfc)
         
         pg.display.update()
